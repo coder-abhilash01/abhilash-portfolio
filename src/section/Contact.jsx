@@ -19,7 +19,7 @@ const Contact = () => {
   
     const split = new SplitText(contactHeading.current, { type: "chars, words" })
 
-  
+  ScrollTrigger.refresh(); 
     gsap.from(split.chars, {
       y: 100,
       opacity: 0,
@@ -60,7 +60,7 @@ const Contact = () => {
       <div style={{ perspective: "1000px" }}>
         <h2
           ref={contactHeading}
-          className="font-[Azonix] text-white text-[11vw] md:text-[8vw] text-center tracking-tight leading-[1.1] mb-15 pt-10"
+          className="font-[Azonix] text-white text-[11vw] md:text-[8vw] text-center tracking-tight leading-[1.1] mb-15 pt-10 px-2  "
         >
           Lets work together
         </h2>
