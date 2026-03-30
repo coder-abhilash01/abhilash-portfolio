@@ -17,25 +17,38 @@ const Contact = () => {
 
   useGSAP(() => {
   
-    const split = new SplitText(contactHeading.current, { type: "chars, words" })
-
-  ScrollTrigger.refresh(); 
-    gsap.from(split.chars, {
-      y: 80,
-      opacity: 0,
-      rotateX: -70, 
-      stagger: 0.02,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: contactHeading.current,
-        start: "top 90%", 
-        end: "top 60%",
-        scrub: 1,
-         invalidateOnRefresh: true
-      }
-    })
+    document.fonts.ready.then(() => {
+      
+      
+      const split = new SplitText(contactHeading.current, { 
+        type: "chars",
+        charsClass: "inline-block" 
+      })
 
   
+      gsap.set(split.chars, { opacity: 1, visibility: "visible" })
+
+      
+      gsap.from(split.chars, {
+        y: 60, 
+        opacity: 0,
+        rotateX: -60, 
+        stagger: 0.02,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: contactHeading.current,
+          start: "top 95%", 
+          end: "top 70%",
+          scrub: 1,
+          invalidateOnRefresh: true
+        }
+      })
+
+      
+      ScrollTrigger.refresh()
+    })
+
+    
     gsap.from(".go-top", {
       scale: 0,
       opacity: 0,
@@ -47,7 +60,12 @@ const Contact = () => {
       }
     })
 
-    return () => split.revert()
+  
+    return () => {
+      if (SplitText.getById(contactHeading.current)) {
+        SplitText.getById(contactHeading.current).revert()
+      }
+    }
   }, { scope: contactSecRef })
 
   return (
@@ -56,29 +74,27 @@ const Contact = () => {
       ref={contactSecRef}
       className="w-full bg-[#111214] py-10 px-5 relative flex flex-col gap-12 overflow-hidden tracking-wide font-light font-[Montserrat]"
     >
-    
-      <div style={{ perspective: "1000px" }} className="overflow-visible w-full">
+      {/* Container with overflow-visible to prevent character clipping */}
+      <div style={{ perspective: "1000px" }} className="overflow-visible w-full relative">
         <h2
           ref={contactHeading}
-          className="font-[Azonix] text-white text-[11vw] md:text-[8vw] text-center tracking-tight leading-[1.1] mb-15 pt-10 px-2  "
+          className="font-[Azonix] text-white text-[10vw] md:text-[8vw] text-center text-wrap tracking-tight leading-[1.1] mb-15 pt-10 px-3 overflow-visible"
+          style={{ transformStyle: "preserve-3d" }}
         >
-          Lets work together
+          Lets work <br/> together
         </h2>
       </div>
 
-      
       <p className="text-white/60 text-center text-sm font-[Montserrat] -mt-10">
         Available for freelance opportunities <br /> & worldwide collaboration
       </p>
 
-  
       <div className="grid grid-cols-1 lg:grid-cols-12 w-full mx-auto max-w-7xl gap-16 items-start border-t border-white/10 pt-16 mt-10">
         <div className="lg:col-span-7 text-white">
           <h3 className="text-white/20 text-xs uppercase tracking-widest mb-10 font-bold">01 / Drop a message</h3>
           <EmailForm />
         </div>
 
-        
         <div className="lg:col-span-5 flex flex-col gap-12">
           <div>
             <h3 className="text-white/20 text-xs uppercase tracking-widest mb-6 font-bold">02 / Contact Enquiries</h3>
@@ -103,7 +119,6 @@ const Contact = () => {
         </div>
       </div>
 
-    
       <div className="relative w-full flex items-center my-16">
         <div className="absolute h-px w-full bg-white/10" />
 
@@ -115,26 +130,14 @@ const Contact = () => {
           <span className="text-black text-[10px] font-bold uppercase text-center relative z-10">
             Top
           </span>
-          
           <div className="absolute inset-0 bg-[#d6d6df] translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
         </MagneticCircle>
       </div>
 
-    
-      
-<footer className="w-full h-[8vh] text-white flex justify-between uppercase
-
-      flex-wrap text-xs items-center">
-
+      <footer className="w-full h-[8vh] text-white flex justify-between uppercase flex-wrap text-xs items-center">
         <div className="text-xs">© 2026 Abhilash</div>
-
-
-
-      <Socials className="sm:gap-5 text-xs flex-wrap"/>
-
+        <Socials className="sm:gap-5 text-xs flex-wrap"/>
       </footer>
-
-
     </section>
   )
 }
