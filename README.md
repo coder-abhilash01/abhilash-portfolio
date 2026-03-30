@@ -1,6 +1,6 @@
 # Abhilash Portfolio
 
-![Preview](assets/preview.gif)
+![Preview](src/assets/preview.gif)
 
 Personal portfolio built to experiment with motion, layout flow and interactive UI.
 
