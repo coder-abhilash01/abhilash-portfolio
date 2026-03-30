@@ -2,7 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useRef } from 'react'
 
-const Customcursor = () => {
+const CustomCursor = () => {
 
 const CursorRef = useRef(null)
 
@@ -81,4 +81,4 @@ return (
 )
 }
 
-export default Customcursor
+export default CustomCursor

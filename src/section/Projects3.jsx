@@ -266,7 +266,6 @@ document.querySelector(".border-effect").addEventListener("mouseleave",()=>{
     
       <div className="bg-linear-to-tr from-[#17181b] to-[#17181b]/90 w-full h-full absolute z-5" />
 
-      <div className="pointer-events-none absolute inset-0 opacity-20 mix-blend-overlay bg-[url('/noise.png')]" />
 
       <div className="text-white/80 ml-5 mt-2 text-xs absolute z-100 font-semibold flex gap-2 font-[Montserrat]">
         <span className="verticle-text"> Keep Scrolling</span>   <div className=" indicator-line h-20 w-px bg-amber-50 relative " >

@@ -7,7 +7,9 @@ import Home from './pages/Home'
 import MainLayout from './layout/MainLayout'
 import Loader from "./components/Loader"
 import PageNotFound from './pages/PageNotFound'
-import Customcursor from './components/Customcursor'
+import CustomCursor from './components/CustomCursor'
+
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -35,7 +37,7 @@ const App = () => {
     <div className="relative">
 
       <Loader onComplete = {()=> (setIsLoaded(true))} />
-         <Customcursor/>
+         <CustomCursor/>
            <Routes>
             <Route path='/' element={<MainLayout isLoaded={isLoaded}/>}>
         <Route index element={<Home isLoaded={isLoaded}/>}/>
