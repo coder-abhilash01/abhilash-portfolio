@@ -21,9 +21,9 @@ const Contact = () => {
 
   ScrollTrigger.refresh(); 
     gsap.from(split.chars, {
-      y: 100,
+      y: 80,
       opacity: 0,
-      rotateX: -90, 
+      rotateX: -70, 
       stagger: 0.02,
       ease: "power4.out",
       scrollTrigger: {
@@ -57,7 +57,7 @@ const Contact = () => {
       className="w-full bg-[#111214] py-10 px-5 relative flex flex-col gap-12 overflow-hidden tracking-wide font-light font-[Montserrat]"
     >
     
-      <div style={{ perspective: "1000px" }}>
+      <div style={{ perspective: "1000px" }} className="overflow-visible w-full">
         <h2
           ref={contactHeading}
           className="font-[Azonix] text-white text-[11vw] md:text-[8vw] text-center tracking-tight leading-[1.1] mb-15 pt-10 px-2  "
