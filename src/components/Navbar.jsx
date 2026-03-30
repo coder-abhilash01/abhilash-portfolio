@@ -4,6 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger"
 import React, { useEffect, useRef, useState } from "react"
 import Sidebar from "./Sidebar"
 import { lenis } from "../utils/lenis"
+import { Link } from "react-router-dom"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -170,7 +171,8 @@ return ()=> {
       className=" absolute top-0 left-0 z-50 w-full flex justify-between items-center py-8 px-7 sm:p-10 md:p-14 text-white text-lg nav-font">
 
       
-      <div className="logo opacity-0 h-6 sm:h-8 overflow-hidden cursor-pointer">
+     <Link to="/home" className="scale-cursor">
+        <div className="logo opacity-0 h-6 sm:h-8 overflow-hidden cursor-pointer">
 
         <div className="logo-track flex flex-col will-change-transform">
 
@@ -180,7 +182,7 @@ return ()=> {
         </div>
 
       </div>
-
+</Link>
 
       {/* DESKTOP MENU */}
       <ul className="hidden md:flex gap-20">

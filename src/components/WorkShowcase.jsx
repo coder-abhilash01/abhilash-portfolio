@@ -124,7 +124,7 @@ const WorkShowcase = () => {
                   rel="noopener noreferrer"
                   className="live-view flex items-center gap-0.5 group cursor-pointer text-black"
                 >
-                  <div className="font-semibold relative  group text-sm ">View Live 
+                  <div className="font-semibold relative  group text-sm scale-cursor">View Live 
                     <span className="w-1 h-1 group-hover:h-0.5 group-hover:w-full rounded-full bg-black absolute -bottom-1 left-0 transition-all duration-300 pointer-events-none "/></div>
                   <ArrowRight size={18} className="transition-transform  group-hover:-translate-y-2 group-hover:translate-x-0.5  duration-300 group-hover:-rotate-45" />
                 </a>
