@@ -185,7 +185,7 @@ return ()=> {
 </Link>
 
       {/* DESKTOP MENU */}
-      <ul className="hidden md:flex gap-20">
+      <ul className="hidden md:flex md:gap-12 lg:gap-20">
 
 
         <li className="nav-item cursor-pointer opacity-0">

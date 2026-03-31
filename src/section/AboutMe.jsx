@@ -105,23 +105,23 @@ const AboutMe = () => {
 
         <div className="line w-full h-px bg-white/40 mt-8 will-change-transform" />
 
-        <div className="about-content relative z-20 mt-12 flex flex-col md:flex-row items-center justify-center gap-10 xl:gap-16">
-          <div className="text-white md:w-[30%] font-[Montserrat]">
+        <div className="about-content relative z-20 mt-12 flex flex-col flex-wrap justify-between gap-10 xl:gap-16 w-full">
+          <div className="text-white flex-1 font-[Montserrat]">
             <p className="about-text2  leading-relaxed opacity-80">
 Building things for the web — interfaces, interactions, and systems that actually work in the real world.
 
             </p>
           </div>
 
-          <div className="relative bg-black about-img opacity-90 w-full sm:h-[60vh]  md:w-[50%]  xl:h-[80vh] overflow-hidden will-change-transform rounded-sm">
+          <div className="relative bg-black about-img opacity-90 w-full sm:h-[60vh]   xl:h-[70vh] overflow-hidden will-change-transform ">
             <img
-              src="/portfolioImgs/aboutImg.png"
+              src="/portfolioImgs/aboutImg2.jpeg"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               alt="About"
             />
           </div>
 
-          <div className="hidden md:flex md:w-[30%] flex-col items-start gap-4 self-end pb-10">
+          <div className=" md:w-[30%] flex-col items-start gap-4 md:self-end pb-10">
              <span className="font-[Cinzel] text-white/40 text-sm tracking-widest uppercase">
                 Artistic Direction
              </span>
