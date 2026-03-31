@@ -6,7 +6,7 @@ Personal portfolio built to experiment with motion, layout flow and interactive 
 
 The idea behind this project was to explore animation-driven interfaces and push visual behaviour closer to what you see on modern interactive websites.
 
-Live → https://abhilashdev.vercel.app
+Live → https://abhilash-portfolio-gray.vercel.app
 
 
 Stack
