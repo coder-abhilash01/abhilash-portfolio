@@ -20,6 +20,11 @@ body,html{
   
 }
 
+*{  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .head{
   font-family: "Azonix";
 }
@@ -27,10 +32,8 @@ body,html{
 .brand-name {
   font-family: "Azonix", sans-serif;
   letter-spacing: -0.02em;
-  color: white;
-background: linear-gradient(90deg, #fff, #aaa);
-background-clip: text;
-color: transparent;
+  color: rgb(235, 233, 233);
+
 }
 
 

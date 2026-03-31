@@ -27,7 +27,7 @@ const HeroSection = ({ startAnimation }) => {
 
     if (!startAnimation) return
 
-    gsap.set(".brand-name", { opacity: 0 })
+    gsap.set(".hero-main-content", { opacity: 1 })
 
     const tl = gsap.timeline({ repeat: -1 })
 
@@ -50,8 +50,8 @@ const HeroSection = ({ startAnimation }) => {
       {
         y: 0,
         opacity: 1,
-        duration: 0.7,
-        stagger: 0.1,
+        duration: 0.8,
+        stagger: 0.12,
         ease: "power4.out",
       }
     )
@@ -95,14 +95,14 @@ const HeroSection = ({ startAnimation }) => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-30 w-full px-6 md:px-20 pb-16 flex flex-col md:flex-col-reverse ">
+      <div className="relative z-30 w-full mb-15 sm:mb-0 px-6 md:px-10 pb-2 flex flex-col opacity-0 hero-main-content">
 
         <h1 className="brand-name select-none font-bold tracking-tight text-[14vw] md:text-[14vw] lg:text-[12vw]">
           ABHILASH
         </h1>
 
-        <div className="relative  hero-animate-text opacity-0 sm:mx-8 md:mx-50">
-          <div className="flex gap-4 text-white/40 text-nowrap">
+        <div className="relative  hero-animate-text  w-full flex justify-between items-center lg:-top-8 ">
+          <div className="flex gap-4 text-white/40 text-nowrap ">
 
             <MoveUpRight size={20} className="mt-1 relative top-4 -left-1" />
 
@@ -114,18 +114,11 @@ const HeroSection = ({ startAnimation }) => {
             </p>
 
           </div>
-        </div>
 
-      </div>
 
-      {/* Bottom Controls */}
-      <div className="absolute left-0 bottom-6 w-full flex justify-between items-center px-6 md:px-16 z-40">
-
-        <Resume className="hidden md:flex hero-animate-text opacity-0" />
-
-        <MagneticCircle
-          className="bg-transparent hero-animate-text opacity-0 border border-white/90
-          hover:backdrop-blur-md group z-10 hidden md:flex flex-col"
+            <MagneticCircle
+          className="bg-transparent hidden md:flex hero-animate-text opacity-0  border border-white/90
+          hover:backdrop-blur-md group z-10  flex-col"
         >
 
           <span className="text-white group-hover:text-black text-xs font-[Montserrat] uppercase z-10">
@@ -137,8 +130,13 @@ const HeroSection = ({ startAnimation }) => {
           <span className="bg-white w-full h-full absolute top-0 translate-x-full rounded-full group-hover:translate-x-0 transition-all duration-300" />
 
         </MagneticCircle>
+        </div>
 
       </div>
+
+    
+
+      
 
     </section>
   )
