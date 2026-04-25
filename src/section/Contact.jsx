@@ -16,19 +16,19 @@ const Contact = () => {
   const contactHeading = useRef(null)
 
   useGSAP(() => {
-  
+    let split; // Instance variable for cleanup
+
     document.fonts.ready.then(() => {
-      
-      
-      const split = new SplitText(contactHeading.current, { 
+      // Guard clause to prevent errors if component unmounted during font load
+      if (!contactHeading.current) return;
+
+      split = new SplitText(contactHeading.current, { 
         type: "chars",
         charsClass: "inline-block" 
       })
 
-  
       gsap.set(split.chars, { opacity: 1, visibility: "visible" })
 
-      
       gsap.from(split.chars, {
         y: 60, 
         opacity: 0,
@@ -44,11 +44,9 @@ const Contact = () => {
         }
       })
 
-      
       ScrollTrigger.refresh()
     })
 
-    
     gsap.from(".go-top", {
       scale: 0,
       opacity: 0,
@@ -60,10 +58,10 @@ const Contact = () => {
       }
     })
 
-  
+    // Manual cleanup for SplitText structure
     return () => {
-      if (SplitText.getById(contactHeading.current)) {
-        SplitText.getById(contactHeading.current).revert()
+      if (split) {
+        split.revert();
       }
     }
   }, { scope: contactSecRef })
@@ -74,7 +72,6 @@ const Contact = () => {
       ref={contactSecRef}
       className="w-full bg-[#111214] py-10 px-5 relative flex flex-col gap-12 overflow-hidden tracking-wide font-light font-[Montserrat]"
     >
-      {/* Container with overflow-visible to prevent character clipping */}
       <div style={{ perspective: "1000px" }} className="overflow-visible w-full relative">
         <h2
           ref={contactHeading}
