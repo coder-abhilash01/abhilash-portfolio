@@ -1,8 +1,9 @@
+
 import React, { useRef } from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrambleTextPlugin } from "gsap/all"
-import { MoveUpRight } from 'lucide-react'
+import { MoveUpRight } from "lucide-react"
 import { SplitText } from "gsap/SplitText"
 import MagneticCircle from "../components/MagneticCircle"
 import Resume from "../components/Resume"
@@ -11,7 +12,7 @@ gsap.registerPlugin(ScrambleTextPlugin, SplitText)
 
 const words = [
   "CREATIVE DEVELOPER",
-  "GSAP ANIMATION SPECIALIST",
+  "GSAP & MOTION DESIGN",
   "REACT + MOTION DESIGN",
   "FULLSTACK DEVELOPER",
   "FRONTEND + BACKEND",
@@ -79,17 +80,15 @@ const HeroSection = ({ startAnimation }) => {
 
         <img
           src="/portfolioImgs/heroSectionImg.png"
-          className="no-select hidden md:flex w-full h-full object-cover 
+          className="no-select hidden md:flex w-full h-full object-cover
           object-top
           md:object-[70%_0%] image"
-          
         />
 
-         <img
+        <img
           src="/portfolioImgs/heroSectionImgMbl.png"
           className="no-select md:hidden w-full h-full object-cover
-          object-[60%] image
-          "
+          object-[60%] image"
         />
 
       </div>
@@ -97,46 +96,91 @@ const HeroSection = ({ startAnimation }) => {
       {/* Main Content */}
       <div className="relative z-30 w-full mb-15 sm:mb-0 px-6 md:px-10 pb-2 flex flex-col opacity-0 hero-main-content">
 
-        <h1 className="brand-name select-none font-bold tracking-tight text-[14vw] md:text-[14vw] lg:text-[12vw]">
-          ABHILASH
-        </h1>
+        {/* Brand */}
+        <div className="relative inline-block w-fit">
 
-        <div className="relative  hero-animate-text  w-full flex justify-between items-center lg:-top-8 ">
-          <div className="flex gap-4 text-white/40 text-nowrap ">
+          {/* Small brand text */}
+          <span
+            className="
+              absolute z-20
+              top-0
+              lg:top-6 xl:top-8 right-0
+              text-[9px] md:text-xs
+              tracking-[1.25em] 
+              md:tracking-[1.35em] lg:tracking-[1.45em]
+              font-light
+              text-white/60
+              uppercase
+            "
+          >
+            WEB STUDIO
+          </span>
 
-            <MoveUpRight size={20} className="mt-1 relative top-4 -left-1" />
+          {/* Main brand name */}
+          <h1
+            className="
+              brand-name
+              relative z-10
+              select-none
+              font-bold
+              tracking-tight
+              text-[14vw]
+              md:text-[14vw]
+              lg:text-[12vw]
+            "
+          >
+            ABHILASH
+          </h1>
+
+        </div>
+
+        {/* Bottom Hero Content */}
+        <div className="relative hero-animate-text w-full flex justify-between items-center lg:-top-8">
+
+          <div className="flex gap-4 text-white/40 text-nowrap">
+
+            <MoveUpRight
+              size={20}
+              className="mt-1 relative top-4 -left-1"
+            />
 
             <p className="text-xs md:text-sm font-light uppercase tracking-widest leading-loose">
-              Not just animations — <br />
+              Full Stack Developer & Website Developer in Kanpur <br />
+
               <span className="text-white">
-                I build systems behind them
+                I build professional websites for local businesses
               </span>
             </p>
 
           </div>
 
+          <MagneticCircle
+            className="
+              bg-transparent
+              hidden md:flex
+              hero-animate-text
+              opacity-0
+              border border-white/90
+              hover:backdrop-blur-md
+              group
+              z-10
+              flex-col
+            "
+          >
 
-            <MagneticCircle
-          className="bg-transparent hidden md:flex hero-animate-text opacity-0  border border-white/90
-          hover:backdrop-blur-md group z-10  flex-col"
-        >
+            <span className="text-white group-hover:text-black text-xs font-[Montserrat] uppercase z-10">
+              Scroll
+            </span>
 
-          <span className="text-white group-hover:text-black text-xs font-[Montserrat] uppercase z-10">
-            Scroll
-          </span>
+            <div className="w-[0.5px] h-10 bg-white group-hover:bg-black pointer-events-none mt-1 z-10" />
 
-          <div className="w-[0.5px] h-10 bg-white group-hover:bg-black pointer-events-none mt-1 z-10" />
+            <span className="bg-white w-full h-full absolute top-0 translate-x-full rounded-full group-hover:translate-x-0 transition-all duration-300" />
 
-          <span className="bg-white w-full h-full absolute top-0 translate-x-full rounded-full group-hover:translate-x-0 transition-all duration-300" />
+          </MagneticCircle>
 
-        </MagneticCircle>
         </div>
 
       </div>
-
-    
-
-      
 
     </section>
   )

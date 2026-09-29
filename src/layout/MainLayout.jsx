@@ -6,7 +6,7 @@ const MainLayout = ({isLoaded}) => {
   const location = useLocation();
 
 
-  const NavbarPaths = ["/"];
+  const NavbarPaths = ["/","/website-development-kanpur"];
 
   const showNav = NavbarPaths.includes(location.pathname)
   return (

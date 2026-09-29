@@ -8,6 +8,7 @@ import MainLayout from './layout/MainLayout'
 import Loader from "./components/Loader"
 import PageNotFound from './pages/PageNotFound'
 import CustomCursor from './components/CustomCursor'
+import WebsiteDevelopmentKanpur from './pages/WebsiteDevelopmentKanpur'
 
 
 
@@ -43,7 +44,7 @@ const App = () => {
         <Route index element={<Home isLoaded={isLoaded}/>}/>
          <Route path='/home' element={<Navigate to="/" replace/>}/>
 
-         
+         <Route path="/website-development-kanpur" element={<WebsiteDevelopmentKanpur/>}/>
         <Route path="*" element={<PageNotFound startAnimation={isLoaded}/> } />
 
         

@@ -4,7 +4,6 @@ import { SplitText } from "gsap/SplitText"
 import ScrollTrigger from "gsap/ScrollTrigger"
 import { useRef } from "react"
 import WorkShowcase from "../components/WorkShowcase"
-import { ChevronLeft, ChevronRight, RectangleHorizontal } from "lucide-react"
 
 gsap.registerPlugin(SplitText, ScrollTrigger)
 

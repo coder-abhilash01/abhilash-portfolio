@@ -11,19 +11,16 @@ const Loader = ({onComplete}) => {
   const location = useLocation()
   const loaderRef = useRef()
 
-  // convert route -> text
- const validRoutes = ["","Home","home"]
+ 
+ const validRoutes = ["/","home", "/website-development-kanpur"]
 
 const getPageName = () => {
-  const path = location.pathname.replace("/", "")
-
-  if (!path) return "PORTFOLIO"
+  const path = location.pathname
 
   if (validRoutes.includes(path)) {
-    return path.toUpperCase()
-  }
-
-  return "ERROR"
+    return "PORTFOLIO"
+    
+  }else { return "ERROR"}
 }
 
   const pageName = getPageName()

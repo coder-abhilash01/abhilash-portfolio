@@ -5,50 +5,52 @@ import { RectangleHorizontal, ArrowRight } from "lucide-react";
 export const projects = [
   {
     id: 1,
-    title: "UrbanShopping",
-    cardClass: "urbanShopping-project ",
+    title: "UrbanVibe",
+    cardClass: "urbanShopping-project",
     textClass: "urban-text z-10",
     image: "/projects/project1.jpeg",
     description:
-      "A full-featured e-commerce platform built to replicate real-world shopping experiences, from product discovery to secure checkout. It includes role-based authentication, an admin dashboard, cart and order management, and seamless payment integration.",
-    tag : "Fullstack . E-commerce Platform",
-    url : "https://urbanvibeshopping.vercel.app/"
+      "A full-stack e-commerce platform with user authentication, product browsing, search and filters, cart and order management, reviews, and online payments. It also includes an admin dashboard for managing products and orders.",
+    tag: "Fullstack · E-commerce Platform",
+    url: "https://urbanvibeshopping.vercel.app/",
   },
+
   {
     id: 2,
-    title: "Gideon",
-    cardClass: "gideon-project ",
+    title: "Gideon AI",
+    cardClass: "gideon-project",
     textClass: "gideon-text z-9",
     image: "/projects/project2.png",
     description:
-      "An AI-powered conversational assistant designed for context-aware and memory-driven interactions. It combines real-time responses with short-term chat memory and long-term vector storage to maintain continuity across conversations.",
-    tag : "Fullstack . Ai Assistant",
-    url : "https://gidieon-ai-assistant-1.onrender.com/"
+      "A full-stack AI assistant that lets users have real-time conversations with an AI and continue previous chats with saved conversation history. It includes user authentication, real-time messaging, and AI-powered responses.",
+    tag: "Fullstack · AI Assistant",
+    url: "https://gidieon-ai-assistant-1.onrender.com/",
   },
+
   {
     id: 3,
-    title: "Fokus",
-    cardClass: "fokus-project",
-    textClass: "fokus-text z-8",
-    image: "/projects/project3.png",
+    title: "TA Sign",
+    cardClass: "taSign-project",
+    textClass: "taSign-text z-8",
+    image: "/projects/project3.jpeg",
     description:
-      "A visually immersive brand experience built for an influencer-driven product, focusing on storytelling through motion with scroll-triggered animations and dynamic transitions.",
-    tag : "Frontend . Brand Website",
-    url : "https://fokus-hackethon-website.vercel.app/"
+      "A full-stack business website for digital signature and compliance services, with an admin dashboard for managing website content, blogs, promotional offers, and downloadable utilities. It also includes backend APIs for handling business enquiries and dynamic website content.",
+    tag: "Fullstack · Business Platform",
+    url: "https://www.tasign.in/",
   },
+
   {
     id: 4,
-    title: "MoodyPlayer",
-    cardClass: "MoodyPlayer-project",
-    textClass: "MoodyPlayer-text z-7",
+    title: "Drishya",
+    cardClass: "drishya-project",
+    textClass: "drishya-text z-7",
     image: "/projects/project4.jpeg",
     description:
-      "An emotion-aware music player that detects facial expressions via camera and dynamically recommends songs based on user mood for a personalized listening experience.",
-    tag : "Fullstack . AI Music Player",
-    url : "https://moody-player-ten.vercel.app/"
-  }
+      "A full-stack website monitoring platform that checks website availability, SSL status, domain expiry, and uptime. It also provides AI-generated summaries and suggestions to help users understand website issues.",
+    tag: "Fullstack · Monitoring & AI Platform",
+    url: "https://drishya-theta.vercel.app/",
+  },
 ];
-
 const WorkShowcase = () => {
   const formatNumber = (num) => String(num).padStart(2, "0");
 
