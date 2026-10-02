@@ -46,7 +46,7 @@ const WebsiteServices = () => {
           </p>
 
           <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
-            The right website depends on what your business needs.
+            Website Development Services in Kanpur
           </h2>
 
           <p className="mt-5 text-base leading-7 text-neutral-600 md:text-lg">

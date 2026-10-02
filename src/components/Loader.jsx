@@ -66,10 +66,10 @@ const getPageName = () => {
 <div className="card1 flex-1 bg-white -mr-px will-change-transform"></div>
 <div className="card2 flex-1 bg-white -ml-px will-change-transform"></div>
 
-      <h1 className="loader-text absolute z-100 top-1/2 left-1/2 
+      <h2 className="loader-text absolute z-100 top-1/2 left-1/2 
       -translate-x-1/2 -translate-y-1/2 text-black text-[11vw] md:text-6xl tracking-wider font-bold text-nowrap flex items-center">
         <span>.</span>{pageName}
-      </h1>
+      </h2>
 
       
 

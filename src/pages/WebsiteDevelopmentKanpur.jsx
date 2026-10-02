@@ -18,7 +18,7 @@ const WebsiteDevelopmentKanpur = () => {
 
         <meta
           name="description"
-          content="Abhilash Web Studio builds business websites, e-commerce stores, and custom web applications for local businesses."
+          content="Website developer in Kanpur building professional business websites, e-commerce stores, and custom web applications for local businesses."
         />
 
         <link
@@ -69,6 +69,29 @@ const WebsiteDevelopmentKanpur = () => {
           name="twitter:image"
           content="https://abhilashwebstudio.vercel.app/og-image.png"
         />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "@id": "https://abhilashwebstudio.vercel.app/#business",
+            name: "Abhilash Web Studio",
+            url: "https://abhilashwebstudio.vercel.app/",
+            telephone: "+917651993775",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Mangla Vihar 2, Shyam Nagar",
+              addressLocality: "Kanpur",
+              addressRegion: "Uttar Pradesh",
+              postalCode: "208015",
+              addressCountry: "IN",
+            },
+            areaServed: {
+              "@type": "City",
+              name: "Kanpur",
+            },
+          })}
+        </script>
       </Helmet>
 
       <main className="min-h-screen bg-white text-neutral-900">

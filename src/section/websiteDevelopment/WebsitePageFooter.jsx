@@ -1,5 +1,6 @@
 
 import { ArrowUpRight } from "lucide-react";
+import Socials from "../../components/Socials"
 
 const WebsitePageFooter = () => {
   return (
@@ -105,12 +106,16 @@ const WebsitePageFooter = () => {
               © 2026 Abhilash Web Studio
             </span>
 
+           <div className="grid gap-3">
             <a
               href="/"
               className="transition hover:text-neutral-900"
             >
               Explore Abhilash Web Studio →
             </a>
+
+            <Socials/>
+            </div> 
 
           </div>
 

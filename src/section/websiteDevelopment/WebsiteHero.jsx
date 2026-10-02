@@ -29,7 +29,7 @@ const WebsiteHero = () => {
           </p>
 
           <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-            Website Development in Kanpur for Local Businesses
+          Website Developer in Kanpur for Local Businesses
           </h1>
 
           <p className="mt-7 max-w-2xl text-base leading-7 text-neutral-200 md:text-lg">
