@@ -12,9 +12,6 @@ const WebsiteDevelopmentKanpur = () => {
   return (
     <>
       <Helmet>
-        <title>
-          Website Developer in Kanpur | Abhilash Web Studio
-        </title>
 
         <meta
           name="description"
