@@ -13,10 +13,7 @@ const WebsiteDevelopmentKanpur = () => {
     <>
       <Helmet>
 
-        <meta
-          name="description"
-          content="Website developer in Kanpur building professional business websites, e-commerce stores, and custom web applications for local businesses."
-        />
+        <meta name="description" content="Abhilash Web Studio by Abhilash Tiwari builds business websites, e-commerce stores, custom web apps and video editing services for local businesses in Kanpur, UP." />
 
         <link
           rel="canonical"
