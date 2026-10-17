@@ -29,12 +29,11 @@ const WebsiteHero = () => {
           </p>
 
           <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-          Website Developer in Kanpur for Local Businesses
+            Website Developer in Kanpur for Local Businesses
           </h1>
 
           <p className="mt-7 max-w-2xl text-base leading-7 text-neutral-200 md:text-lg">
-            I design and develop business websites, e-commerce stores,
-            and custom web applications that help local businesses
+            I design and develop business websites, e-commerce stores, custom web apps and video editing solutions that help local businesses
             present their services, reach customers, and grow online.
           </p>
 

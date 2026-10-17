@@ -145,10 +145,11 @@ const HeroSection = ({ startAnimation }) => {
             />
 
             <p className="text-xs md:text-sm font-light uppercase tracking-widest leading-loose">
-              Full Stack Developer & Website Developer in Kanpur <br />
+              FULL STACK DEVELOPER
+<br />
 
-              <span className="text-white">
-                I build professional websites for local businesses
+              <span className="text-white text-wrap">
+              I build professional websites & real-world web applications
               </span>
             </p>
 
